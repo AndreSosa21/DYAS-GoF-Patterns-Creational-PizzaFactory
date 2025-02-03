@@ -14,7 +14,7 @@ public class MoldeadorPizzaIntegral implements MoldeadorFactory {
     @Override
     public void moldearPizzaPequena() {
         Logger.getLogger(MoldeadorPizzaIntegral.class.getName())
-                .log(Level.INFO, "[O] Moldeando pizza pequena de masa convencional.");
+                .log(Level.INFO, "[O] Moldeando pizza pequena de masa integral.");
         
         //CODIGO DE LLAMADO AL MICROCONTROLADOR
 
@@ -22,7 +22,7 @@ public class MoldeadorPizzaIntegral implements MoldeadorFactory {
     @Override
     public void molderarPizzaMediana() {
         Logger.getLogger(MoldeadorPizzaIntegral.class.getName())
-                .log(Level.INFO, "[O] Moldeando pizza mediana de masa convencional.");
+                .log(Level.INFO, "[O] Moldeando pizza mediana de masa integral.");
         
         //CODIGO DE LLAMADO AL MICROCONTROLADOR
     }

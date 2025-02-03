@@ -14,7 +14,7 @@ public class HorneadorPizzaGruesa implements HorneadorFactory {
     @Override
     public void hornear() {
         Logger.getLogger(AmasadorPizzaGruesa.class.getName())
-            .log(Level.INFO, "[~~] Horneando la pizza delgada con masa convencional.");
+            .log(Level.INFO, "[~~] Horneando la pizza gruesa.");
 
         //CODIGO DE LLAMADO AL MICROCONTROLADOR
     }

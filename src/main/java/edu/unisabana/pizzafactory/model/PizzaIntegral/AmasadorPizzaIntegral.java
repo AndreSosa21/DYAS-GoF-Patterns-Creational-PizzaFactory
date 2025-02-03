@@ -14,7 +14,7 @@ public class AmasadorPizzaIntegral implements AmasadorFactory{
     @Override
     public void amasar() {
         Logger.getLogger(AmasadorPizzaIntegral.class.getName())
-                .log(Level.INFO, "[@@] Amasando la pizza delgada con masa convencional.");
+                .log(Level.INFO, "[@@] Amasando la pizza integral.");
         
         //CODIGO DE LLAMADO AL MICROCONTROLADOR
         

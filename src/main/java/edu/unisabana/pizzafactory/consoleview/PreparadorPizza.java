@@ -1,6 +1,10 @@
 
 package edu.unisabana.pizzafactory.consoleview;
 
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import edu.unisabana.factories.AmasadorFactory;
 import edu.unisabana.factories.HorneadorFactory;
 import edu.unisabana.factories.MoldeadorFactory;
@@ -11,13 +15,6 @@ import edu.unisabana.factories.PizzaIntegralFactory;
 import edu.unisabana.pizzafactory.model.ExcepcionParametrosInvalidos;
 import edu.unisabana.pizzafactory.model.Ingrediente;
 import edu.unisabana.pizzafactory.model.Tamano;
-import edu.unisabana.pizzafactory.model.PizzaDelgada.AmasadorPizzaDelgada;
-import edu.unisabana.pizzafactory.model.PizzaDelgada.HorneadorPizzaDelgada;
-import edu.unisabana.pizzafactory.model.PizzaDelgada.MoldeadorPizzaDelgada;
-
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -29,7 +26,7 @@ public class PreparadorPizza {
         try {
             Ingrediente[] ingredientes=new Ingrediente[]{new Ingrediente("queso",1),new Ingrediente("jamon",2)};            
             PreparadorPizza pp=new PreparadorPizza();            
-            pp.prepararPizza(ingredientes, Tamano.MEDIANO, "delgada");
+            pp.prepararPizza(ingredientes, Tamano.PEQUENO, "delgada");
         } catch (ExcepcionParametrosInvalidos ex) {
             Logger.getLogger(PreparadorPizza.class.getName()).log(Level.SEVERE, "Problema en la preparacion de la Pizza", ex);
         }
@@ -47,7 +44,7 @@ public class PreparadorPizza {
                 } else if (tipo.equals("gruesa")) {
                     fabrica = new PizzaGruesaFactory(); // Se debe implementar
                 } else if (tipo.equals("integral")) {
-                    fabrica = new PizzaIntegralFactory() // Se debe implementar
+                    fabrica = new PizzaIntegralFactory(); // Se debe implementar
                 } else {
                     throw new ExcepcionParametrosInvalidos("Tipo de masa invalido: " + tipo);
                 }
